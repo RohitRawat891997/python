@@ -1,0 +1,20 @@
+# workflow name
+
+name: pyliner
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  code-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v7
+
+      - name: install code linter
+        run: pip install ruff
+
+      - name: run code linter
+        run: ruff check .
+        
