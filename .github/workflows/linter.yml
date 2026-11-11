@@ -3,7 +3,8 @@
 name: pyliner
 
 on: 
-  workflow_dispatch:
+  push:
+    paths: "*.py"
 
 jobs:
   code-linter:
