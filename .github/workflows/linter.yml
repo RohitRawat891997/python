@@ -13,9 +13,12 @@ jobs:
       - name: code checkout
         uses: actions/checkout@v7
 
-      - name: install code linter
+      - name: install ruff
         run: pip install ruff
 
-      - name: run code linter
+      - name: fix lint issue
         run: ruff check .  --fix
+        
+      - name: Run code linter
+        run: ruff check .
         
